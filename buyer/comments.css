@@ -1,0 +1,120 @@
+
+
+
+.box {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    margin:auto;
+    width: 700px;
+}
+
+.info {
+    width: 700px;
+    margin-top: 4rem;
+    /* margin-left: 4rem; */
+}
+
+.info-box {
+    width: 700px;
+    height: 200px;
+    border: 2px black solid;
+    padding: 5px;
+    /* margin-left: 4rem; */
+}
+
+.input-group {
+    margin-top: 3rem;
+    margin-bottom: 2px;
+    width: 700px;
+}
+.main{
+
+}
+.comment-box {
+    /* height: 500px; */
+    border: 2px black solid;
+    width: 700px;
+    margin-top: 4rem;
+    /* margin-left: 4rem; */
+    padding: 10px;
+    /* overflow: scroll; */
+}
+
+.commenter {
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 50px;
+    margin: 1rem;
+    /* padding: 10px; */
+}
+
+.commenter-info {
+    margin-left: 1rem;
+    margin-bottom: 0.5px;
+}
+
+.user-comments {
+    display: flex;
+    flex-direction:row;
+    margin-left: 1rem;
+    margin-bottom: 0.5px;
+}
+
+.user-comments p {
+    margin-bottom:0.5px; 
+}
+.commenter-info p{
+   
+    margin-bottom: 0.2px;
+    margin-left: 3px;
+}
+.main h3{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.date{
+    margin-left: 4rem;
+}
+.form-control{
+    width: 700px;
+    height:150px;
+}
+.input-group-append{
+    margin-top:10px;
+  float:right;
+
+}
+.upper {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+#upper-part {
+    align-items: center;
+    background: linear-gradient(135deg,#75C2F6 70%,#1D5D9B);
+
+    border-radius: 20px;
+    margin:2rem;
+}
+
+.waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  .navbar{
+    height:50px
+  }

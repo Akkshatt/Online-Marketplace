@@ -1,0 +1,234 @@
+body{
+    text-transform: uppercase;
+   
+  background:url('sun.jpeg') no-repeat; 
+  background-size: cover;
+  background-position: center ;  
+  font: italic small-caps bold 16px/2 cursive;
+
+  
+}
+.dash {
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 50px;
+    overflow: auto;
+    background-color: #dedede;
+    height:1000px; /* Add this line to enable scrollbar if content exceeds boundaries */
+    /* background: linear-gradient(130deg,white 30%,#98ff98 80%); 
+    background-size: cover;
+    background-position: center ; */
+}
+.waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  
+.upper {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+   
+}
+
+#upper-part {
+   
+    align-items: center;
+    background: linear-gradient(135deg,#75C2F6 70%,#1D5D9B);
+    /* background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%); */
+    /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+
+    /* background-image: linear-gradient(to right top, #e4e5e4, #e0e2e0, #dbe0dc, #d7ddd9, #d2dbd5); */
+    padding: 5px;
+    border-radius: 20px;
+    margin:2rem;
+}
+.right-up{
+    border:2px solid black;
+    margin-left:20px;
+    border-radius: 20px;
+    width:250px;
+    margin-bottom:20px;
+    margin-top:2rem;
+    backdrop-filter: blur(30px); 
+
+}
+.right-up p{
+    margin-left: 50px;
+    padding:10px;
+    
+}
+.horizontal{
+  border:2px solid black;
+  height: 0;
+}
+.vertical {
+    border-left: 2px solid black;
+    /* height:1000px; */
+    margin-left:200px;
+    margin-top: 0;
+}
+h2{
+    margin-left: 2rem;
+    margin: 2rem;
+}
+/* .row1{
+    display:flex;
+    flex-direction: row;
+    margin-top: 2rem;
+ 
+}
+.row2{
+    display:flex;
+    flex-direction: row;
+    margin-top: 2rem;
+   
+}
+.row3{
+    display:flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    
+} */
+.row1-c1, .row2-c1, .row3-c1{
+    background-color: #F3EEEA;
+    display: flex;
+    backdrop-filter: blur(14px); 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    height:200px;
+    border:2px solid black;
+    margin-left: 50px;
+    border-radius: 15px;
+    text-decoration: none; /* Remove underline */
+    cursor: default; /* Remove hover effect */
+}
+/* .row2-c1{
+    background-color: #F3EEEA;
+    width:300px;
+    height:200px;
+    border:2px solid black;
+    margin-left: 50px;
+    border-radius: 15px;
+}
+.row3-c1{
+    background-color: #F3EEEA;
+    width:300px;
+    height:200px;
+    border:2px solid black;
+    margin-left: 50px;
+    border-radius: 15px;
+} */
+.bigrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:1000px;
+    height:200px;
+    border:2px solid black;
+    margin-left: 50px;
+    border-radius: 15px;
+    margin-top: 5rem;
+    padding: 2rem;
+    /* background-color: blanchedalmond; */
+    background-color: #F3EEEA;
+}
+
+.bigrow1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.bigrow1 img {
+    border: 0.1rem solid gray;
+    /* border-radius: 1rem; */
+    height: 9rem;
+    width: 9rem;
+}
+
+#footer {
+    text-align: center;
+    /* margin-top:5rem; */
+}
+
+#footer p {
+    margin-top: 20px;
+}
+
+.box-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Add other styles as needed */
+}
+.box-part .row1,
+.box-part .row2,
+.box-part .row3 {
+    /* Add styles for .row1, .row2, .row3 elements inside .box-part */
+    
+        display:flex;
+        flex-direction: row;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color:black;
+    
+      
+}
+
+
+img {
+    border-radius: 30px;
+}
+.details{
+    display:flex;
+    flex-direction: column;
+
+}
+i{
+    font-size: 24px
+}
+.row1-c1:hover {
+    text-decoration: none; /* Remove underline on hover */
+    cursor: default; 
+}
+h5, p, i{
+    color: black;
+}
+.navb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 20px;
+    background:#1F4172;
+    color: black;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  
+  .nsec2 {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }

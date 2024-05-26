@@ -1,0 +1,87 @@
+
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+
+}
+body{
+   
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(247,223,247,1) 0%, rgba(173,241,255,1) 53%, rgba(247,224,255,1) 79%); */
+    /* background:url('back2.jpeg') no-repeat;  */
+    background-size: cover;
+    background-position: center ;
+}
+.dash{
+
+    border: 5px solid black;
+    background: linear-gradient(130deg,white 30%,#98ff98 80%);
+    margin: 50px;
+    border-radius: 20px;
+    /* margin:5rem;  */
+     /* display: flex;
+     justify-content: center;
+     align-items: center; */
+     height: 800px;
+     /* background:url('back2.jpeg') no-repeat; 
+    background-size: cover;
+    background-position: center ; */
+
+}
+  .box {
+    display: flex;
+     flex-direction: column; 
+    justify-content: center;
+     align-items: center;
+     margin-top:3rem;
+    /* margin-top:5rem; */
+ 
+}
+
+.box h1{
+    margin-top: 1rem ;
+}
+
+.upper {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+#upper-part {
+    align-items: center;
+    background: linear-gradient(135deg,#75C2F6 70%,#1D5D9B);
+    /* background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%); */
+    /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+
+    /* background-image: linear-gradient(to right top, #e4e5e4, #e0e2e0, #dbe0dc, #d7ddd9, #d2dbd5); */
+    padding: 5px;
+    border-radius: 20px;
+    margin:2rem;
+}
+
+
+/* a {
+    margin-right: 20px;
+    margin-left: 20px;
+} */
+.navbar{
+    display: flex;
+}
+.waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+   

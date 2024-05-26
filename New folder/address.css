@@ -1,0 +1,110 @@
+/* body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+} */
+
+.dash {
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 50px;
+    background-image: radial-gradient(circle, #687d9e, #8791ab, #a3a6b8, #bcbcc6, #d4d4d4);
+    /* overflow: auto; */
+    
+    
+    height:1000px; /* Add this line to enable scrollbar if content exceeds boundaries */
+    /* background: linear-gradient(130deg,white 30%,#98ff98 80%); 
+    background-size: cover;
+    background-position: center ; */
+}
+.waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  
+.upper {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+#upper-part {
+    align-items: center;
+    background: linear-gradient(135deg,#75C2F6 70%,#1D5D9B);
+    /* background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%); */
+    /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+
+    /* background-image: linear-gradient(to right top, #e4e5e4, #e0e2e0, #dbe0dc, #d7ddd9, #d2dbd5); */
+    padding: 5px;
+    border-radius: 20px;
+    margin:2rem;
+}
+
+
+
+
+.container {
+  margin-top: 80px;
+  margin-left:650px; 
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+    width:500px;
+    /* border:2px solid black;*/
+    border-radius: 20px; 
+    background: transparent;
+    border: 2px solid #1450A3;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #5C5470;
+
+    /* order: 1px solid #ccc; */
+    padding: 20px;
+    /* border-radius: 10px;  */
+}
+
+input {
+    margin-top: 10px;
+    /* display: block; */
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #8EACCD;
+    color:#1450A3;
+}  
+
+.one {
+    
+    width: 420px;
+    background: transparent;
+    border: 2px solid #1450A3;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #5C5470;
+    color: black;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-bottom: 5rem;
+
+}
+#submit{
+  width:150px;
+  /* margin-top: 10px; */
+}
+/* #address_line1{
+  margin-left: px;
+} */
+ ::placeholder{
+  color: #1450A3;
+}

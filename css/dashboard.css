@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+        font-family:'Poppins', sans-serif ;
+        font-weight: bold;
+      
+}
+body{
+    font: italic small-caps bold 16px/2 cursive;
+}
+
+.dash {
+    border: 5px solid black;
+    background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%); 
+    background-size: cover;
+    background-position: center ;
+    border-radius: 20px;
+    margin: 50px;
+}
+
+.navb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #D0A2F7;
+    color: black;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.nsec2 {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.image {
+    margin: 3rem;
+    position: relative;
+  
+
+
+
+}
+
+.fit {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    border-radius: 20px;
+    /* position: relative; */
+
+}
+
+.image-text {
+    position: absolute;
+    top: 0;
+    /* margin-top: 2rem; */
+    padding: 2rem;
+    margin:auto;
+    /* margin-left: 2rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    gap: 3rem;
+}
+
+.image-text h2 {
+    margin: 2rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box-left {
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #5C5470;
+    margin-top: 3em;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    background-color: #B8D8E3;
+/* 
+    width:500px; */
+    
+    /* border: 1px solid #ccc; */
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    /* background-color: #fff; */
+    /* display:flex;
+   flex-wrap: wrap;  */
+    transition: 1s;
+}
+/* 
+.box-left:hover {
+    
+    transform: scale(1.1);
+    z-index: 2;
+
+} */
+
+.image-card img {
+    width: 150px;
+    height: 250px;
+    border-radius: 20px;
+    /* position: relative; */
+    /* s */
+    /* width: 250px; */
+    /* border: 1px solid #ccc; */
+    /* height: auto; */
+    /* padding: 20px; */
+    /* border-radius: 20px; */
+    text-align: center;
+
+}
+
+.captions h2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.caption p {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-button {
+    background-color: blue;
+    color: white;
+    border: 20px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin-top: 10px; */
+    cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+    background-color: #45a049;
+}
+
+.box-right {
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #5C5470;
+    margin-top: 3rem;
+    margin-right:5rem;
+    margin-left: 3rem;
+    /* position: absolute; */
+    /* float: right;
+    right: 5rem; */
+    margin-bottom: 2rem;
+    /* width:400px; */
+    border: 1px solid #ccc;
+    height: 600px;
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: baseline;
+    text-align: center;
+    align-items: center;
+    background-color: #fff;
+    /* display:flex;
+   flex-wrap: wrap;  */
+    /* transition:1s; */
+}
+
+.product-box {
+    width: auto;
+    min-height: 150px;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+     /* margin-left: 2rem ;   */
+     /* margin-top: 2rem;  */
+     margin-bottom: 2rem ;  
+    display: flex;
+    /* display:flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction:column;   */
+    align-items: center;
+    justify-content: space-between;
+    padding:30px;
+    box-sizing: border-box;
+  }
+  
+  .image-2 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+  }
+  
+  .details {
+    /* flex: 1; */
+    margin-left: 1rem;
+  }
+  
+  .image2 img{
+    width:200px;
+    height:200px;
+    padding:10px;
+    border:2px solid black;
+    border-radius:50%;
+  }
+  /* .imgage2{
+    width:70px;
+    height:70px;
+    border:2px solid black;
+    border-radius:30px;
+  }  */
+  .account{
+    margin-top:2rem;
+    /* padding:10px; */
+
+  }
+  .product-container{
+    display: flex;
+    flex-direction: row;
+
+    width:auto;
+    padding:20px;
+    border:2px black solid;
+    border-radius: 30px;
+
+  }
+  .account p{
+    margin-left:2rem;
+    margin-top:1rem;
+  } 
+  .abc{
+    margin-left:2rem;
+  }
+.image button{
+    height: 50px;
+    margin-top: 4rem;
+    margin-left:10rem;
+    /* padding:20px; */
+    /* text-align: center; */
+}
+.details p{
+    margin-top:1rem;
+}
+.submit{
+    border:2px black solid;
+    border-radius: 20px;
+    size:80px;
+    padding:10px;
+    background-color: #B8D8E3;
+}
+.product-container {
+    flex: 1; /* Allow the container to grow and take available space */
+    width: calc(33.33% - 20px); /* 33.33% width with 20px margin on each side */
+    margin: 10px; /* Space between items */
+    padding: 20px;
+    border: 2px black solid;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+.myChart {
+    width: 600px; /* Set the desired width */
+    height: 600px; /* Set the desired height */
+    margin-top: 20px; /* Adjust as needed */
+}
+.myChart2{
+    margin-top: 3rem;
+    width: 600px; /* Set the desired width */
+    height: 600px; /* Set the desired height */
+}

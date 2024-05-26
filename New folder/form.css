@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%);  */
+}
+
+body {
+    /* background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%); */
+    /* background: url('new.jpeg') no-repeat;
+    background-size: cover; */
+    background:url('back2.jpeg') no-repeat; 
+    background-size: cover;
+    background-position: center ;
+
+}
+
+.navbar {
+    /* background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%); */
+    margin:2rem;
+    background-color: #8bc6ec;
+    background-image: linear-gradient(45deg, #8bc6ec 0%, #cc80d2 50%, #e7e95c 100%);
+    border-radius: 20px;
+
+
+
+}
+
+/* body{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+   min-height: 100vh;  
+  background:url('night.jpg') no-repeat;
+  background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%);
+   background-size: cover;
+  background-position: center ; 
+}  */
+.product-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+}
+
+.product-box h3 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}
+
+.one {
+
+    width: 420px;
+    background: transparent;
+    border: 2px solid #1450A3;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #5C5470;
+    color: black;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-bottom: 5rem;
+
+}
+
+input,
+select {
+    border-radius: 10px;
+}
+
+#footer {
+    text-align: center;
+    /* margin-top:5rem; */
+}
+
+#footer p {
+    margin-top: 20px;
+}
+
+a,
+h1,
+h2,
+h3,
+p,
+button,
+placeholder {
+    font-family: 'Vina Sans', cursive;
+}
+.dash{
+    background: url('doodle.jpg') no-repeat;
+    background-size: cover;
+  border: 5px solid black;
+  border-radius: 20px;
+     margin: 50px; 
+     /* backdrop-filter: blur(20px); */
+    box-shadow: 0 0 50px #5C5470;
+    background:url('back2.jpeg') no-repeat; 
+    background-size: cover;
+    background-position: center ;
+  }

@@ -1,0 +1,87 @@
+*{
+    margin:0;
+   padding:0; 
+   box-sizing: border-box;
+
+}
+.dash {
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 50px;
+    overflow: auto; 
+    
+    
+    /* height:1000px;  */
+    /* background: linear-gradient(130deg,white 30%,#98ff98 80%); 
+    background-size: cover;
+    background-position: center ; */
+}
+.waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  
+.upper {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+#upper-part {
+    align-items: center;
+    background: linear-gradient(135deg,#75C2F6 70%,#1D5D9B);
+    /* background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%); */
+    /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+
+    /* background-image: linear-gradient(to right top, #e4e5e4, #e0e2e0, #dbe0dc, #d7ddd9, #d2dbd5); */
+    padding: 5px;
+    border-radius: 20px;
+    margin:2rem;
+}
+
+.container {
+    /* Add margin to the left side of the container to move it right */
+    /* margin-top: 5rem;
+    margin-left: 750px; */
+    /* display:flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    text-align: center;
+    /* justify-content: center; */
+    width: 500px;
+    height: auto;
+    position: relative;
+      margin-top:-18px;
+      float:right;
+      right:200px;
+      top:0px;
+    padding: 50px;
+}
+/* .container h1{
+    margin-left: 30px;
+} */
+form{
+   margin-top: 2rem;
+    border:2px solid black;
+    border-radius: 20px;
+    width:500px;
+    height: 500px;
+    padding:50px;
+}
+label{
+    padding-top: 2rem;
+}
+.buttons{
+    padding-top: 2rem; 
+}

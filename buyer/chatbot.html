@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace Chatbot</title>
+</head>
+<body>
+    <h1>Marketplace Chatbot</h1>
+    <form id="chatForm">
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button type="button" onclick="sendMessage()">Send</button>
+    </form>
+    <div id="chatbox"></div>
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById('userInput').value;
+            document.getElementById('userInput').value = '';
+
+            // Add user message to chatbox
+            document.getElementById('chatbox').innerHTML += '<p><strong>You:</strong> ' + userInput + '</p>';
+
+            // Send user input to the server and get chatbot response
+            fetch('/get_response', {
+                method: 'POST',
+                body: new URLSearchParams({ 'user_input': userInput }),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Add chatbot response to chatbox
+                document.getElementById('chatbox').innerHTML += '<p><strong>Chatbot:</strong> ' + data.response + '</p>';
+            });
+        }
+    </script>
+</body>
+</html>

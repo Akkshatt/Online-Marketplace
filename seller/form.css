@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+
+        font-family:'Poppins', sans-serif ;
+        font-weight: bold;
+    
+}
+
+body {
+    background-color: #dedede;
+    /* background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%); */
+    /* background: url('new.jpeg') no-repeat;
+    background-size: cover; */
+    background:url('back2.jpeg') no-repeat; 
+    background-size: cover;
+    background-position: center ;
+    font: italic small-caps bold 16px/2 cursive;
+
+}
+
+.navb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 20px;
+    background:#1F4172;
+    color: black;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  
+  .nsec2 {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+/* body{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+   min-height: 100vh;  
+  background:url('night.jpg') no-repeat;
+  background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%);
+   background-size: cover;
+  background-position: center ; 
+}  */
+.product-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+}
+
+.product-box h3 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}
+
+.one {
+
+    width: 420px;
+    background: transparent;
+    border: 2px solid #1450A3;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #5C5470;
+    color: black;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-bottom: 5rem;
+
+}
+
+input,
+select {
+    border-radius: 10px;
+}
+
+#footer {
+    text-align: center;
+    /* margin-top:5rem; */
+}
+
+#footer p {
+    margin-top: 20px;
+}
+
+/* a,
+h1,
+h2,
+h3,
+p,
+button,
+placeholder {
+    font-family: 'Vina Sans', cursive;
+} */
+.dash{
+    background: url('doodle.jpg') no-repeat;
+    background-size: cover;
+  border: 5px solid black;
+  border-radius: 20px;
+     margin: 50px; 
+     /* backdrop-filter: blur(20px); */
+    box-shadow: 0 0 50px #5C5470;
+    background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%); 
+    background-size: cover;
+    background-position: center ;
+  }

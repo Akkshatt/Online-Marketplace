@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Saira+Extra+Condensed:wght@100;400&display=swap');
+body{
+    
+}
+
+
+h1{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.main{
+   
+
+}
+h2{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    height: 600px;
+    justify-content:center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    margin-left: 2rem;
+   overflow:scroll;
+}
+form {
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form label,
+form textarea,
+form input {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   background-color: #dedede;
+   
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.product-image {
+    width: 100%;
+    max-height:50%;
+}
+
+.product-details {
+    padding: 15px;
+    font-family: 'Poppins';
+}
+
+.upvote-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    /* width: 100%; */
+}
+
+.comment-section {
+    margin-top: 10px;
+}
+
+.comment {
+    /* border: 1px solid #ccc;
+    border-radius: 8px; */
+    margin-top: 10px;
+    padding: 10px;
+}
+.product-list{
+    /* justify-content: center;
+    align-items: center; */
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+}
+
+.product-image {
+    max-width: 100%; /* Ensure the image does not exceed its container width */
+    height:60%;; /* Maintain the aspect ratio of the image */
+    border: 1px solid #ddd; /* Add a border for better visibility */
+    border-radius: 5px; /* Add rounded corners for a more aesthetic look */
+    margin-bottom: 10px; /* Add some spacing between images and other elements */
+}
+/* .upvote-btn{
+    width:30px;
+} */
+.comment-form {
+    display: none; /* Hide the comment form by default */
+}
+
+.comment-toggle {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+p{
+     font-family: 'Poppins', sans-serif; 
+    /* font-family: 'Playfair Display'; */
+    
+    font-size: 30px;
+}
+.product-list{
+    margin-bottom: 2rem;
+}
+.navb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 20px;
+    background:#1F4172;
+    color: black;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  
+  .nsec2 {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .dash{
+    border-bottom: 1px dotted black;
+    /* background: #E8CBC0;
+background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);  
+background: linear-gradient(to right, #636FA4, #E8CBC0); */
+    
+
+     background-color: #dedede;
+    
+     
+     background-position: center ; 
+     /* background:url('back2.jpeg') no-repeat; 
+     background-size: cover;
+     background-position: center ; */
+     backdrop-filter: blur(20px);
+     
+  }

@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);; */
+    /* background-image: linear-gradient(to right top, #e4e5e4, #e0e2e0, #dbe0dc, #d7ddd9, #d2dbd5); */
+    /* background-color: #132761;
+    background-image: linear-gradient(160deg, #132761 0%, #b8c6c0 50%, #1a2463 100%); */
+    /* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); */
+     /* background:url('ab.jpeg') no-repeat;  */
+    background-size: cover;
+
+
+}
+
+.upper {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+#upper-part {
+    align-items: center;
+    background: linear-gradient(135deg,#75C2F6 70%,#1D5D9B);
+    /* background-image: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%); */
+    /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+
+    /* background-image: linear-gradient(to right top, #e4e5e4, #e0e2e0, #dbe0dc, #d7ddd9, #d2dbd5); */
+    padding: 5px;
+    border-radius: 20px;
+    margin:2rem;
+}
+
+a {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.product-box {
+    width: 500px;
+    border: 5px solid #7C81AD;
+    border-radius: 25px;
+    padding: 40px;
+    margin: 30px;
+}
+
+.big-heading {
+    font-family: "Montserrat-Black";
+    font-size: 3.5rem;
+    line-height: 2;
+    color: #04364A;
+    margin-left: 2em;
+
+}
+
+.small-heading {
+
+    font-family: "Montserrat-Black";
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #04364A;
+    margin-left: 5em;
+
+
+}
+
+.row{
+    border-radius: 20px;
+    
+}
+/* .row {
+    display: flex;
+    
+    flex-direction: row;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+   
+    
+
+} */
+
+
+ /* background-image: linear-gradient(to right top, #3f684b, #487756, #528762, #5b976d, #65a779); */
+
+.btn {
+    margin-left: 2em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+#pricing {
+    padding: 100px;
+
+
+}
+
+.pricing-column-1 {
+    padding: 3% 2%;
+
+}
+
+.pricing-column-2 {
+    padding: 3% 2%;
+
+}
+
+.price-text {
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+@media (max-width:1028px) {
+    #title {
+        text-align: center;
+    }
+
+
+    .title-image {
+        position: static;
+        transform: rotate(0);
+
+    }
+}
+
+.rows {
+    display: flex;
+    /* flex-direction: row; */
+    /* background-image: linear-gradient(to right top, #494949, #575758, #656666, #747675, #848584); */
+    /* background-color: #d2dbd5; */
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    background:transparent;
+    backdrop-filter:blur(50px);
+    border-radius: 20px;
+
+}
+
+.card-body {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.rows-2 {
+    display: flex;
+    flex-direction: row;
+    /* background-image: linear-gradient(to right top, #494949, #575758, #656666, #747675, #848584); */
+    /* background-color: #d2dbd5;
+     */
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    background:transparent;
+    backdrop-filter:blur(50px);
+    border-radius: 20px;
+    
+}
+
+.image {
+    position: relative;
+
+}
+
+.fit {
+    max-width: 99%;
+    max-height: 100%;
+}
+
+.image-text {
+    position: absolute;
+    top: 0;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.white-section {
+     /* background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%); */
+     /* backdrop-filter:blur(5px);  */
+     margin: 2rem;
+
+}
+
+#cta {
+    /* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); */
+    color: #57375D;
+    text-align: center;
+    margin-bottom: 2em;
+    /* background:transparent;
+    backdrop-filter:blur(20px); */
+
+
+
+}
+
+.cta-heading {
+    font-family: "Montserrat-Black";
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+#footer {
+    text-align: center;
+}
+#footer p{
+    margin-top: 20px;
+}
+
+.social-icons {
+    margin: 20px 10px;
+}
+
+/* .two {
+    margin-left: 50px;
+   
+    border-radius: 50%;
+}
+*/
+.image-two {
+    border-radius: 60%;
+    max-width: 100%;
+    margin-top: 0;
+    margin-left: 40px;
+    margin-bottom: 2rem;
+} 
+/* Custom CSS to style the columns */
+.row {
+    display: flex; /* Use flexbox layout for the row */
+    flex-wrap: wrap; /* Allow content to wrap to the next line if there's not enough space */
+    /* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); */
+    background:transparent;
+    backdrop-filter:blur(20px);
+    
+   
+}
+
+.col-lg-6 {
+    flex: 0 0 50%; /* Each column takes up 50% of the row width */
+    max-width: 50%; /* Set maximum width to 50% */
+}
+
+.two {
+    flex: 0 0 50%; /* Each column takes up 50% of the row width */
+    max-width: 40%; /* Set maximum width to 50% */
+    
+}
+
+/* Optional: Add some spacing between the columns */
+.col-lg-6, .two {
+    padding: 50px;  
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.slideshow {
+    width: 100%;
+    height: 100%; /* Set your preferred height */
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .slide {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: -10rem;;
+  }
+  
+  /* First Slide Background Image */
+  .slideshow .slide:nth-child(1) {
+    background-image: url('anu.jpg'); /* Path to your first image */
+  }
+  
+  /* Second Slide Background Image */
+  .slideshow .slide:nth-child(2) {
+    background-image: url('sau.jpg'); /* Path to your second image */
+  }
+  
+  @keyframes slide-animation {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .slideshow .slide {
+    animation: slide-animation 3s linear infinite; /* Change '3s' to set the duration of each slide */
+  }
+  
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #000; /* Line above the section */
+    border-bottom: 1px solid #000; /* Line below the section */
+    padding: 20px 0; /* Optional: Add padding for space around content */
+}
+
+.info-content {
+    width: 50%; /* Adjust the width of the content area as needed */
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-left {
+    width: 45%; /* Adjust the width of the left part */
+}
+
+.info-right {
+    width: 45%; /* Adjust the width of the right part */
+    margin-left: 4rem; /* Add margin between left and right parts */
+}
+
+.info-content p {
+    margin: 10px 0;
+}
+.info-line{
+    border-top: 1px solid #000; /* Line above the section */
+    border-bottom: 1px solid #000; /* Line below the section */
+}
+i{
+    font-size:30px;
+  }
+  a,h1,h2,h3,p,button,placeholder{
+    font-family: 'Vina Sans', cursive;
+  }
+ .dash {
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 50px;
+    overflow: auto; /* Add this line to enable scrollbar if content exceeds boundaries */
+    background: linear-gradient(130deg,white 30%,#98ff98 80%); 
+    background-size: cover;
+    background-position: center ;
+}
+.waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  .navbar{
+    height:100px
+  }
+  

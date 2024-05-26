@@ -1,0 +1,248 @@
+<?php
+session_start();
+require_once('../connection/conn.php');
+
+$user_id = $_SESSION['user_id'];
+
+// Function to get products with comments and replies from the database
+function getProducts() {
+    $conn = connectToDatabase();
+    $sql = "SELECT r.*, c.comment_id, c.comment_text, u.username as commenter_username
+            FROM requests r
+            LEFT JOIN comments c ON r.request_id = c.request_id
+            LEFT JOIN users u ON c.user_id = u.id
+            ORDER BY r.request_id, c.comment_id";
+    $result = $conn->query($sql);
+
+    $products = [];
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            if (!isset($products[$row['request_id']])) {
+                $products[$row['request_id']] = $row;
+                $products[$row['request_id']]['comments'] = [];
+            }
+
+            if ($row['comment_id'] !== null) {
+                $comment = [
+                    'comment_id' => $row['comment_id'],
+                    'comment_text' => $row['comment_text'],
+                    'commenter_username' => $row['commenter_username'],
+                ];
+
+                $products[$row['request_id']]['comments'][] = $comment;
+            }
+        }
+    }
+
+    $conn->close();
+
+    return $products;
+}
+
+// Function to save a new product to the database with image as blob
+function saveProduct($productName, $productDescription, $productImage, $userId) {
+    $conn = connectToDatabase();
+
+    $sql = "INSERT INTO requests (name, description, upvotes, user_id, image) VALUES (?, ?, 0, ?, ?)";
+    $stmt = $conn->prepare($sql);
+
+    if ($stmt) {
+        $stmt->bind_param("ssib", $productName, $productDescription, $userId, $productImage);
+
+        // Execute the statement
+        if ($stmt->execute()) {
+            echo "Product saved successfully";
+            header("Location: forum.php");
+            exit();
+        } else {
+            echo "Error saving product: " . $stmt->error;
+        }
+
+        $stmt->close();
+    } else {
+        echo "Error preparing statement: " . $conn->error;
+    }
+
+    $conn->close();
+}
+
+// Handle product submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['productName']) && isset($_POST['productDescription'])) {
+    $productName = $_POST['productName'];
+    $productDescription = $_POST['productDescription'];
+
+    // Assuming you have a session variable for user ID
+    $userId = $_SESSION['user_id'];
+
+    // Handle image upload
+    $productImage = NULL;
+
+    if ($_FILES['productImage']['error'] !== UPLOAD_ERR_NO_FILE) {
+        // Image uploaded, move it to the upload directory
+        $productloc = $_FILES['productImage']['tmp_name'];
+
+        // Check if the file exists
+        if (file_exists($productloc)) {
+            // Read image data
+            $productImage = file_get_contents($productloc);
+
+            // Check if image data is successfully read
+            if ($productImage === false) {
+                echo "Error reading image data.";
+            } else {
+                // Save product with image data
+                saveProduct($productName, $productDescription, $productImage, $userId);
+            }
+        } else {
+            echo "Error: File not found.";
+        }
+    } else {
+        // Save product to the database without an image
+        saveProduct($productName, $productDescription, NULL, $userId);
+    }
+}
+
+// Handle upvoting
+function upvoteProduct($productId, $userId) {
+    $conn = connectToDatabase();
+
+    $upvotedProducts = isset($_SESSION['upvotedProducts']) ? $_SESSION['upvotedProducts'] : [];
+
+    if (!in_array($productId, $upvotedProducts)) {
+        // Corrected the column name to 'upvotes'
+        $updateSql = "UPDATE requests SET upvotes = upvotes + 1 WHERE request_id = ?";
+
+        $stmt = $conn->prepare($updateSql);
+
+        if ($stmt) {
+            $stmt->bind_param("i", $productId);
+
+            if ($stmt->execute()) {
+                echo "Product liked successfully";
+                $_SESSION['upvotedProducts'][] = $productId;
+                header("Location: forum.php");
+                exit();
+            } else {
+                echo "Error updating likes: " . $stmt->error;
+            }
+
+            $stmt->close();
+        } else {
+            echo "Error: " . $conn->error;
+        }
+    } else {
+        echo "You have already upvoted this product";
+    }
+
+    $conn->close();
+}
+
+// Handle upvoting
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["request_id"])) {
+    $request_id = $_GET["request_id"];
+    upvoteProduct($request_id, $user_id);
+}
+
+// Get products with comments
+$products = getProducts();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="forum.css">
+    <title>Product Request Page</title>
+</head>
+<body>
+
+<h1>Product Request Page</h1>
+
+<div class="request-form">
+    <form method="POST" action="forum.php" enctype="multipart/form-data">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required>
+
+        <label for="productDescription">Product Description:</label>
+        <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+
+        <label for="productImage">Product Image:</label>
+        <input type="file" id="productImage" name="productImage" accept="image/*">
+
+        <button type="submit">Submit Product</button>
+    </form>
+</div>
+
+<div class="product-list">
+    <?php foreach ($products as $product): ?>
+        <div class="product-card">
+            <?php if ($product['image'] !== null): ?>
+                <!-- Display the image if available -->
+                <img class="product-image" src="data:image/jpeg;base64,<?= base64_encode($product['image']); ?>" alt="<?= $product['name']; ?>" class="product-image">
+            <?php endif; ?>
+            <div class="product-details">
+                <h2><?= $product['name']; ?></h2>
+                <p><?= $product['description']; ?></p>
+              
+                <button class="upvote-btn" onclick="upvoteProduct(<?= $product['request_id']; ?>)">
+                <i class='bx bxs-upvote' undefined ></i> <?= $product['upvotes']; ?>
+                </button>
+
+                <!-- Comment Section -->
+                <div class="comment-section">
+                    <?php foreach ($product['comments'] as $comment): ?>
+                        <div class="comment">
+                            <strong><?= $comment['commenter_username']; ?>:</strong> <?= $comment['comment_text']; ?>
+
+                            <!-- Display Replies -->
+                            <?php $replies = getreviews($comment['comment_id']); ?>
+
+                            <?php if (!empty($replies)): ?>
+                                <?php foreach ($replies as $reply): ?>
+                                    <div class="reply">
+                                        <strong><?= $reply['replier_name']; ?>:</strong> <?= $reply['reply_text']; ?>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+
+                            <!-- Reply Form -->
+                            <form method="POST" action="forum.php">
+                                <input type="hidden" name="commentId" value="<?= $comment['comment_id']; ?>">
+                                <label for="replyText">Add Reply:</label>
+                                <textarea id="replyText" name="replyText" rows="2" required></textarea>
+                                <button type="submit">Submit Reply</button>
+                            </form>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+                <!-- Comment Form -->
+                <form method="POST" action="forum.php" enctype="multipart/form-data">
+                    <input type="hidden" name="requestId" value="<?= $product['request_id']; ?>">
+                    <label for="commentText">Add Comment:</label>
+                    <textarea id="commentText" name="commentText" rows="2" required></textarea>
+                    <button type="submit">Submit Comment</button>
+                </form>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+<script>
+    function upvoteProduct(requestId) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "forum.php?request_id=" + requestId, true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                window.location.reload();
+            }
+        };
+        xhr.send();
+    }
+</script>
+
+</body>
+</html>
